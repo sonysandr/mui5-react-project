@@ -61,21 +61,29 @@ function Add() {
           justifyContent: "center",
         }}
       >
-        <Box width={400} height={280} bgcolor="white" p={3} borderRadius={5}>
+        <Box
+          width={400}
+          height={280}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+          p={3}
+          borderRadius={5}
+        >
           <Typography variant="h6" color="grey" textAlign="center">
             Create Posts
           </Typography>
 
           <UserBox>
-            <Avatar
-              alt="Remy Sharp"
-              src="https://images.pexels.com/photos/3970387/pexels-photo-3970387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              sx={{ width: 30, height: 30 }}
-            />
-            <Typography fontWeight={500} variant="span">
-              John Doe
-            </Typography>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://images.pexels.com/photos/3970387/pexels-photo-3970387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                sx={{ width: 30, height: 30 }}
+              />
+              <Typography fontWeight={500} variant="span">
+                John Doe
+              </Typography>
           </UserBox>
+
           <TextField
             sx={{ width: "100%" }}
             id="standard-multiline-static"
@@ -84,22 +92,29 @@ function Add() {
             placeholder="What are you thinking"
             variant="standard"
           />
+
           <Stack direction="row" gap={1} mt={2} mb={2}>
+
             <EmojiEmotions color="primary" />
             <Image color="secondary" />
             <PersonAdd color="sucess" />
             <VideoCameraBack color="error" />
+
           </Stack>
-          <ButtonGroup
-            variant="contained"
-            aria-label="outlined primary button group"
-            fullWidth
-          >
-            <Button>post</Button>
-            <Button sx={{ width: "100px" }}>
-              <DateRange />
-            </Button>
-          </ButtonGroup>
+
+            <ButtonGroup
+              variant="contained"
+              aria-label="outlined primary button group"
+              fullWidth
+            >
+                <Button>post</Button>
+
+                <Button sx={{ width: "100px" }}>
+                  <DateRange />
+                </Button>
+
+            </ButtonGroup>
+
         </Box>
       </Modal>
     </>
