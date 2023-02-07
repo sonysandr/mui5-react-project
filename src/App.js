@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Stack } from "@mui/system";
+import React from "react";
+import Feed from "./components/Feed";
+import NavBar from "./components/NavBar";
+import RightBar from "./components/RightBar";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <NavBar />
+
+      {/* The Stack component manages layout of immediate children 
+      along the vertical or horizontal axis 
+      with optional spacing and/or dividers between each child. */}
+      <Stack direction="row" spacing={2} justifyContent="space-between">
+        <SideBar />
+        <Feed />
+        <RightBar />
+      </Stack>
+      
+    </Box>
   );
 }
 
